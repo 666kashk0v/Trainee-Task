@@ -11,18 +11,18 @@ namespace TraineeshipTask
         static void Main(string[] args)
         {
             //Use constructor and add manually incorrect "emailAdress" field
-            AddName name = new AddName("Иванов", "Иван", "Иванович");
-            name.emailAddress = "ivanoviimail.ru";
-            Console.WriteLine(name.ShowFormatedName());
+            FormatUserInfo user1 = new FormatUserInfo("Иванов", "Иван", "Иванович");
+            user1.emailAddress = "ivanoviimail.ru";
+            Console.WriteLine(user1.ShowFormatedName());
             Console.ReadLine();
 
             //Set input fields manually, also set additional field("emailAdress").
-            AddName name1 = new AddName();
-            name1.FirstName = "Дмит рий";
-            name1.LastName = "Дми триен ко";
-            name1.MiddleName = "Дмит риев";
-            name1.emailAddress = "dmitrydd@gmail.com";
-            Console.WriteLine(name1.ShowFormatedName());
+            FormatUserInfo user2 = new FormatUserInfo();
+            user2.FirstName = "Дмит рий";
+            user2.LastName = "Дми триен ко";
+            user2.MiddleName = "Дмит риев";
+            user2.emailAddress = "dmitrydd@gmail.com";
+            Console.WriteLine(user2.ShowFormatedName());
             Console.ReadLine();
         }
     }

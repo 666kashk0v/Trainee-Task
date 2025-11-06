@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TraineeshipTask
 {
-    class AddName
+    class FormatUserInfo
     {
         //Input fields
         public string FirstName { get; set; }
@@ -15,15 +15,15 @@ namespace TraineeshipTask
         //Additional field
         public string emailAddress { get; set; } = null;
         //Constructor for init "Input fields"
-        public AddName(string firstName, string lastName, string middleName) 
+        public FormatUserInfo(string firstName, string lastName, string middleName) 
         {
             FirstName = firstName;
             LastName = lastName;
             MiddleName = middleName;
         }
         //Empty constructor if we want to init classes field manually
-        public AddName() { }
-        //Callback method which delete spaces and sets the correct cases
+        public FormatUserInfo() { }
+        //Method which delete spaces and sets the correct cases
         private void FormatName()
         {
             FirstName = FirstName.Replace(" ", "");
@@ -34,7 +34,7 @@ namespace TraineeshipTask
             LastName = char.ToUpper(LastName[0]) + LastName.Substring(1).ToLower();
             MiddleName = char.ToUpper(MiddleName[0]) + ".";
         }
-        //Callback method which check status of "emailAddress" field
+        //Method which check status of "emailAddress" field
         private bool IsEmail() 
         {
             if (emailAddress == null || emailAddress.Contains("@") == false) //check the "@" sign
